@@ -1,7 +1,11 @@
 package com.concept.algorithms;
 
+import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
+
+import com.concept.algorithms.PrintBFS.Node;
 
 public class BinaryTreeSerializeDeserialize {
 
@@ -16,6 +20,32 @@ public class BinaryTreeSerializeDeserialize {
 		
 		TreeNode deserialized = btsd.deserialize(serialized);
 		btsd.printTree(deserialized);
+	}
+	
+	private String serialize(TreeNode root) {
+		
+		if(root==null){
+	        return "";
+	    }
+		
+		StringBuilder sb = new StringBuilder();
+		
+		LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
+		queue.add(root);
+		
+		while(!queue.isEmpty()){
+			 TreeNode t = queue.poll();
+			 if(t!=null) {
+				 sb.append(String.valueOf(t.getValue()) + ",");
+				 queue.add(t.left);
+		         queue.add(t.right);
+			 } else {
+				 sb.append("#,");
+			 }   
+		}
+		sb.deleteCharAt(sb.length()-1);
+	    System.out.println(sb.toString());
+	    return sb.toString();
 	}
 	
 	private TreeNode deserialize(String data) {
@@ -59,34 +89,31 @@ public class BinaryTreeSerializeDeserialize {
 		return root;
 	}
 
-	private String serialize(TreeNode root) {
-		
-		if(root==null){
-	        return "";
-	    }
-		
-		StringBuilder sb = new StringBuilder();
-		
-		LinkedList<TreeNode> queue = new LinkedList<TreeNode>();
-		queue.add(root);
-		
-		while(!queue.isEmpty()){
-			 TreeNode t = queue.poll();
-			 if(t!=null) {
-				 sb.append(String.valueOf(t.getValue()) + ",");
-				 queue.add(t.left);
-		         queue.add(t.right);
-			 } else {
-				 sb.append("#,");
-			 }   
-		}
-		sb.deleteCharAt(sb.length()-1);
-	    System.out.println(sb.toString());
-	    return sb.toString();
-	}
+	
 
 	private void printTree(TreeNode root) {
-		
+		Queue<TreeNode> q = new ArrayDeque<>();
+		q.add(root);
+		int levelNodes = 0;
+		//boolean reverse=false;
+		while (q.size() > 0) {
+			levelNodes = q.size();
+			while(levelNodes > 0) {
+				TreeNode n = q.poll();
+				System.out.print (n.value);
+//				if (reverse) {
+//					if (n.right!=null) q.add(n.right);
+//					if (n.left!=null) q.add(n.left);
+//				} else {
+					if (n.left!=null) q.add(n.left);
+					if (n.right!=null) q.add(n.right);
+//				}
+				
+				levelNodes--;
+			}
+			//reverse=!reverse;
+			System.out.println("");
+		}
 
 	}
 

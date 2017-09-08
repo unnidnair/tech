@@ -27,8 +27,19 @@ public class RotateArray {
 		
 		int a = arr.length - order; 
 		
+		System.out.println("");
 		rotate(arr, 0, a-1);
+		for (int j:arr) {
+			System.out.print(j + " ");
+		}
+		System.out.println("");
+		
 		rotate(arr, a, arr.length-1);
+		for (int j:arr) {
+			System.out.print(j + " ");
+		}
+		System.out.println("");
+		
 		rotate(arr, 0, arr.length-1);
 		
 	}
