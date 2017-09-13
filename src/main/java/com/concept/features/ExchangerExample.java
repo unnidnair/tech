@@ -1,4 +1,4 @@
-package com.concept.features.concurrent;
+package com.concept.features;
 
 import java.util.concurrent.Exchanger;
 import java.util.concurrent.TimeUnit;

@@ -19,15 +19,15 @@ public class LongestPathBetweenTwoLeafNodes {
 
 	public static void main(String[] args) {
 		LongestPathBetweenTwoLeafNodes path = new LongestPathBetweenTwoLeafNodes();
-		Node node = new Node(1);
-		node.left = new Node(2);
-		node.right = new Node(3);
-		node.left.left = new Node(4);
-		node.left.right = new Node(5);
+		NodeX node = new NodeX(1);
+		node.left = new NodeX(2);
+		node.right = new NodeX(3);
+		node.left.left = new NodeX(4);
+		node.left.right = new NodeX(5);
 		System.out.println(path.findLongestPath(node));		
 	}
 
-	private int findLongestPath(Node node) {
+	private int findLongestPath(NodeX node) {
 		
 		if (null==node) return 0;
 		
@@ -40,19 +40,19 @@ public class LongestPathBetweenTwoLeafNodes {
 		return Math.max(leftHeight+rightHeight+1, Math.max(leftLongest, rightLongest));
 	}
 
-	private int findHeight(Node node) {
+	private int findHeight(NodeX node) {
 		if (null==node) return 0;
 		return (1 + Math.max(findHeight(node.left), findHeight(node.right)));
 	}
 
 }
 
-class Node {
+class NodeX {
    
 	int data;
-    Node left, right;
+    NodeX left, right;
  
-    public Node(int item) {
+    public NodeX(int item) {
         data = item;
         left = right = null;
     }

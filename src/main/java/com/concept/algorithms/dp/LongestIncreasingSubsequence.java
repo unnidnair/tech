@@ -42,7 +42,7 @@ public class LongestIncreasingSubsequence {
 		}
 		
 		for (int i=0;i<n;i++)
-			System.out.print(sol[i]);
+			System.out.print(sol[i] + " ");
 		System.out.println("");
 		System.out.println("Max is at position " + max + ", max length of subsequence is " + T[max] + ", max element in subsequence is " + arr[max]);
 		

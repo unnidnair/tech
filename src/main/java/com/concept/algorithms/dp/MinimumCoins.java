@@ -1,8 +1,8 @@
 package com.concept.algorithms.dp;
 
 /**
- * Given a total and coins of certain denomination with infinite supply, what is the minimum number
- * of coins it takes to form this total.
+ * Given a total and coins of certain denomination with infinite supply, what is the 
+ * minimum number of coins it takes to form this total.
  *
  * Time complexity - O(coins.size * total)
  * Space complexity - O(coins.size * total)
