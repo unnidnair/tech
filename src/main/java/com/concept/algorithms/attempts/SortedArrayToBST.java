@@ -1,5 +1,7 @@
 package com.concept.algorithms.attempts;
 
+import com.concept.pojo.Node;
+
 public class SortedArrayToBST {
 	
 	static Node root;
@@ -39,20 +41,9 @@ public class SortedArrayToBST {
         if (node == null) {
             return;
         }
-        System.out.print(node.data + " ");
+        System.out.print(node.value + " ");
         preOrder(node.left);
         preOrder(node.right);
     }
 
-}
-
-class Node {
-    
-    int data;
-    Node left, right;
-     
-    Node(int d) {
-        data = d;
-        left = right = null;
-    }
 }
