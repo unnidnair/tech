@@ -1,11 +1,10 @@
-package com.concept.algorithms.attempts;
+package com.concept.algorithms.tree;
 
 import java.util.ArrayDeque;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import com.concept.algorithms.PrintBFS;
 import com.concept.pojo.Node;
 
 public class InvertBinaryTree {

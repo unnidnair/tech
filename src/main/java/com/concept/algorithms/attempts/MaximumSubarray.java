@@ -1,5 +1,8 @@
 package com.concept.algorithms.attempts;
 
+/** Compute largest sum which can be derived from subarray of 
+ * a given array 
+ */
 public class MaximumSubarray {
 
 	public static void main(String[] args) {

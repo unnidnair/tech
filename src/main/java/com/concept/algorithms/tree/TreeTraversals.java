@@ -1,4 +1,4 @@
-package com.concept.algorithms.attempts;
+package com.concept.algorithms.tree;
 
 import java.util.ArrayList;
 import java.util.List;

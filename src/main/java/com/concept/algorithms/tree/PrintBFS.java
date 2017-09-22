@@ -1,4 +1,4 @@
-package com.concept.algorithms;
+package com.concept.algorithms.tree;
 
 import java.util.ArrayDeque;
 import java.util.Queue;

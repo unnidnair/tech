@@ -15,12 +15,18 @@ public class Meetings {
 	}
 	
 	public boolean canAttendMeetings(Interval[] intervals) {
-	    Arrays.sort(intervals, new Comparator<Interval>(){
-	        public int compare(Interval a, Interval b){
-	            return a.start-b.start;
-	        }
-	    });
-	 
+//	    Arrays.sort(intervals, new Comparator<Interval>(){
+//	        public int compare(Interval a, Interval b){
+//	            return a.start-b.start;
+//	        }
+//	    });
+	    
+		//lambda
+	    Arrays.sort(intervals, (a,b) -> a.start-b.start);
+	    
+	    //Read https://stackoverflow.com/questions/21970719/java-arrays-sort-with-lambda-expression
+	    //and http://www.baeldung.com/java-8-double-colon-operator
+	    
 	    for(int i=0; i<intervals.length-1; i++){
 	        if(intervals[i].end>intervals[i+1].start){
 	            return false;

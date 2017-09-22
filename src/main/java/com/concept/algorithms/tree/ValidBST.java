@@ -1,4 +1,4 @@
-package com.concept.algorithms.attempts;
+package com.concept.algorithms.tree;
 
 import com.concept.pojo.Node;
 

@@ -1,7 +1,7 @@
 package com.concept.algorithms.attempts;
 
 
-package com.interview.tree;
+package com.concept.algorithms.tree;
 
 /**
  * Date 07/20/2014
