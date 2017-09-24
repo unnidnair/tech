@@ -22,8 +22,8 @@ public class MinimumCoins {
 
 	private int findMinimumNumberOfCoins(int total, int[] coins) {
 		
-		int T[] = new int[total];
-		int R[] = new int[total];
+		int T[] = new int[total]; //Total Number of coins
+		int R[] = new int[total]; //To get final answer
 		int minCoins = 0;
 		
 		for (int i=0; i<total; i++) {

@@ -1,5 +1,6 @@
 package com.concept.sort;
 
+//Gif of some sort -- http://javadecodedquestions.blogspot.com/2013/02/data-structure-questions-for-java.html
 public class SortAlgorithms {
 
 	public static void main(String... args) {
