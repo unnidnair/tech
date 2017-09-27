@@ -3,7 +3,7 @@ package com.concept.algorithms.attempts;
 /** Compute largest sum which can be derived from subarray of 
  * a given array 
  */
-public class MaximumSubarray {
+public class MaximumSubarraySum {
 
 	public static void main(String[] args) {
 		int a[] = {-2,1,-3,4,-1,2,1,-5,4};
