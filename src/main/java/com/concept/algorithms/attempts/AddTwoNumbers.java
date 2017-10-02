@@ -1,5 +1,7 @@
 package com.concept.algorithms.attempts;
 
+import java.util.ArrayList;
+
 public class AddTwoNumbers {
 	
 //	Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
@@ -31,6 +33,8 @@ public class AddTwoNumbers {
 	    }
 	    return dummyHead.next;
 	}
+	
+	ArrayList a;
 
 	class ListNode {
 	     int val;
