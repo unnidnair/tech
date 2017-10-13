@@ -14,6 +14,7 @@ public class TreeTraversals {
 
 	static List<Integer> orderedList = new ArrayList<>();
 
+	//root, left, right
 	public static void preOrderTraversal(TreeNode root) {
 		if (root == null)
 			return;
@@ -22,6 +23,7 @@ public class TreeTraversals {
 		preOrderTraversal(root.right);
 	}
 
+	//left, root, right
 	public static void inOrderTraversal(TreeNode root) {
 		if (root == null)
 			return;
@@ -30,6 +32,7 @@ public class TreeTraversals {
 		inOrderTraversal(root.right);
 	}
 
+	//left, right, root
 	public static void postOrderTraversal(TreeNode root) {
 		if (root == null)
 			return;

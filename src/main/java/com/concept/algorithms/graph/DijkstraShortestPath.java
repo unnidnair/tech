@@ -1,4 +1,4 @@
-package com.concept.graph;
+package com.concept.algorithms.graph;
 
 import java.util.HashMap;
 import java.util.Map;

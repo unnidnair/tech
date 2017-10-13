@@ -1,7 +1,6 @@
-package com.concept.algorithms.attempts;
-
-
 package com.concept.algorithms.tree;
+
+import com.concept.pojo.Node;
 
 /**
  * Date 07/20/2014
@@ -48,7 +47,7 @@ public class LargestBSTInBinaryTree {
         //of this node is not greater/equal than max of left and less than min of right
         //then subtree with this node as root will not be BST. 
         //Return false and max size of left and right subtree to parent
-        if(leftMinMax.isBST == false || rightMinMax.isBST == false || (leftMinMax.max > root.data || rightMinMax.min <= root.data)){
+        if(leftMinMax.isBST == false || rightMinMax.isBST == false || (leftMinMax.max > root.value || rightMinMax.min <= root.value)){
             m.isBST = false;
             m.size = Math.max(leftMinMax.size, rightMinMax.size);
             return m;
@@ -62,11 +61,11 @@ public class LargestBSTInBinaryTree {
      
         //if root.left is null then set root.data as min else
         //take min of left side as min
-        m.min = root.left != null ? leftMinMax.min : root.data;
+        m.min = root.left != null ? leftMinMax.min : root.value;
   
         //if root.right is null then set root.data as max else
         //take max of right side as max.
-        m.max = root.right != null ? rightMinMax.max : root.data;
+        m.max = root.right != null ? rightMinMax.max : root.value;
    
         return m;
     }

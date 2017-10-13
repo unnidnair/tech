@@ -28,8 +28,8 @@ public class WordDistance {
 	public static void main(String[] args) {
 		String[] words = {"practice", "makes", "perfect", "coding", "makes"};
 		WordDistance dist = new WordDistance(words);
-		System.out.println(dist.shortest("coding", "practice"));
-		System.out.println(dist.shortest("makes", "coding"));
+		System.out.println("distance between coding and practice " + dist.shortest("coding", "practice"));
+		System.out.println("distance between makes and coding " + dist.shortest("makes", "coding"));
 	}
 
 	

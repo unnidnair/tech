@@ -10,10 +10,10 @@ public class TwoSum {
 
 	public static void main(String[] args) {
 		TwoSum sum = new TwoSum();
-		int nums[] = {3,3};
-		int result[] = sum.twoSum1(nums, 6);
-//		int nums[] = {2, 7, 11, 15};
-//		int result[] = sum.twoSum(nums, 9);
+//		int nums[] = {3,3};
+//		int result[] = sum.twoSum1(nums, 6);
+		int nums[] = {2, 7, 11, 15};
+		int result[] = sum.twoSum(nums, 9);
 		
 		if (null!=result)
 			System.out.println("Numbers " + result[0] + " : " + result[1]);
