@@ -7,7 +7,7 @@ package com.concept.algorithms.dp;
  * Time complexity - O(coins.size * total)
  * Space complexity - O(coins.size * total)
  * 
- * YouTube -- Bottom up DP - https://youtu.be/Y0ZqKpToTic
+ * YouTube -- Bottom up DP - https://youtu.be/NJuKJ8sasGk
  *
  */
 public class MinimumCoins {

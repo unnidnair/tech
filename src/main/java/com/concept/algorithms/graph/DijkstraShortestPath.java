@@ -3,6 +3,9 @@ package com.concept.algorithms.graph;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.concept.pojo.Graph;
+import com.concept.pojo.Vertex;
+
 //Video -- https://www.youtube.com/watch?v=lAXZGERcDf4
 //Pic -- https://drive.google.com/file/d/0B2GSydBQGID6NUZXd09KakhUNms/view?usp=sharing
 public class DijkstraShortestPath {

@@ -1,4 +1,4 @@
-package com.concept.algorithms.graph;
+package com.concept.pojo;
 
 import java.util.Set;
 

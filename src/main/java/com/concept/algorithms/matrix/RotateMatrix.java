@@ -1,4 +1,4 @@
-package com.concept.algorithms;
+package com.concept.algorithms.matrix;
 
 public class RotateMatrix {
 

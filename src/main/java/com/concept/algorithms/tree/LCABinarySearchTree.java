@@ -15,9 +15,9 @@ import com.concept.pojo.Node;
  */
 public class LCABinarySearchTree {
 	public Node lowestCommonAncestor(Node root, int p, int q) {
-        if (root.data > Math.max(p, q)) {
+        if (root.value > Math.max(p, q)) {
             return lowestCommonAncestor(root.left, p, q);
-        } else if (root.data < Math.min(p, q)) {
+        } else if (root.value < Math.min(p, q)) {
             return lowestCommonAncestor(root.right, p, q);
         } else {
             return root;

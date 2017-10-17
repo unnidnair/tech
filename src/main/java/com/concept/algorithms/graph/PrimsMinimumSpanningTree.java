@@ -2,6 +2,9 @@ package com.concept.algorithms.graph;
 
 import java.util.*;
 
+import com.concept.pojo.Graph;
+import com.concept.pojo.Vertex;
+
 /**
  * Find minimum spanning tree using Prim's algorithm
  *
