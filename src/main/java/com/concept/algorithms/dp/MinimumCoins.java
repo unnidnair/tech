@@ -22,29 +22,33 @@ public class MinimumCoins {
 
 	private int findMinimumNumberOfCoins(int total, int[] coins) {
 		
-		int T[] = new int[total]; //Total Number of coins
-		int R[] = new int[total]; //To get final answer
-		int minCoins = 0;
+		int T[] = new int[total+1]; //Total Number of coins
+		int R[] = new int[total+1]; //To get final answer
+		T[0] = 0;
 		
-		for (int i=0; i<total; i++) {
-			T[i] = Integer.MAX_VALUE;
+		//int minCoins = 0;
+		
+		
+		
+		for (int i=0; i<=total; i++) {
+			T[i] = Integer.MAX_VALUE-1;
 			R[i] = -1;
 		}
 		
 		T[0]=0;
 		
 		for (int j=0; j<coins.length;j++) {
-			for (int i=1;i<total;i++) {
+			for (int i=1;i<=total;i++) {
 				if (i >= coins[j]) {
-					if (T[i] > T[i - coins[j]]) {
-						T[i] = T[i - coins[j]];
-						R[i] = j;
+					if (T[i - coins[j]] + 1 < T[i]) {
+						T[i] = 1 + T[i - coins[j]];
+						 R[i] = j;
 					}
 				}
 			}
 		}
 		printCoinCombination(R, coins);
-		return minCoins;
+		return T[total];
 	}
 	
 	private void printCoinCombination(int R[], int coins[]) {
